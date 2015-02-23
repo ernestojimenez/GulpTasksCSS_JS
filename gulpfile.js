@@ -22,6 +22,7 @@ gulp.task('sass', function () {
     gulp.src('./scss/*.scss')
         .pipe(sass())
         .pipe(minifycss())
+        .pipe(prefixer())
         .pipe(gulp.dest('./css'));
 });
 
