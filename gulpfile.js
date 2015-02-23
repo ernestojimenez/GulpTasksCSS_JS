@@ -19,7 +19,7 @@ var targetJS = 'js';
 
 
 gulp.task('sass', function () {
-    gulp.src('./scss/*.scss')
+    gulp.src('./scss/**/*.scss')
         .pipe(sass())
         .pipe(minifycss())
         .pipe(prefixer())
@@ -34,7 +34,7 @@ gulp.task('js', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('./scss/*.scss', ['sass']);
+  gulp.watch('./scss/**/*.scss', ['sass']);
   gulp.watch('./js/source/*.js', ['js']);
 
 });
